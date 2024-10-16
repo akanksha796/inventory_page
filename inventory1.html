@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Inventory Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS -->
+</head>
+<body>
+
+    <h1>Inventory Management</h1>
+    
+    <input type="text" id="id" placeholder="Item ID" required>
+    <input type="text" id="name" placeholder="Item Name" required>
+    <input type="number" id="quantity" placeholder="Quantity" required>
+    <input type="number" step="0.01" id="price" placeholder="Price" required>
+    <button onclick="addItem()"><i class="fas fa-plus"></i> Add Item</button>
+    <button onclick="clearAllItems()"><i class="fas fa-trash-alt"></i> Clear All Items</button>
+    <input type="text" id="search" placeholder="Search by ID or Name" onkeyup="searchItems()">
+    <table id="inventoryTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Inventory items will be added here -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script> 
+</body>
+</html>
